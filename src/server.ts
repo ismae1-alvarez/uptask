@@ -1,4 +1,5 @@
-import express, {Express} from 'express';
+import express from 'express';
+import type {Express} from 'express'
 import dotenv from "dotenv";
 import { connectDB } from './config/db';
 import projectRoutes from './routes/projectRoutes';
