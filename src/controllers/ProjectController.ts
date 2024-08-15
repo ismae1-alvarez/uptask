@@ -34,7 +34,7 @@ export class ProjectController{
             const result =  await Project.findById(id).populate('tasks');
             if(!result){
                 const error =  new Error('Proyecto no encontrado');
-                return res.status(404).json({error: error.message});
+                return res.status(404).send({error: error.message});
             };
 
             res.send(result);
@@ -56,7 +56,7 @@ export class ProjectController{
 
             project.clientName = req.body.clientName;
             project.projectName =  req.body.projectName;
-            project.description = req.body.descripcion;
+            project.description = req.body.description;
           await project.save();
 
 
