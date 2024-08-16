@@ -14,6 +14,7 @@ connectDB();
 
 const app:Express = express();
 
+// Cors
 app.use(cors(corsConfig));
 
 // Logging
