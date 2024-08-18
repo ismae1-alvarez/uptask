@@ -9,9 +9,9 @@ import { authenticate } from "../middleware/auth";
 
 const router:Router= Router();
 
+router.use(authenticate);
 
 router.post('/', 
-    authenticate,
     body('projectName')
         .notEmpty().withMessage('El Nombre del proyecto es obligatorio'),
     body('clientName')
