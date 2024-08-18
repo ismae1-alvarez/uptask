@@ -38,4 +38,11 @@ router.post('/login',
     AuthController.login
 );
 
+router.post('/request-code', 
+    body('email')
+        .notEmpty().withMessage('El e-mail no debe ir vacio'),
+    handleInputErrores,
+    AuthController.requestConfirmationcode
+);
+
 export default router;
