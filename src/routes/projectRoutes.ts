@@ -119,11 +119,22 @@ router.post('/:projectId/team/find',
     TeamController.findMemberByEmail
 );
 
+router.get('/:projectId/team', 
+    TeamController.getProjectTeam
+);
+
 router.post('/:projectId/team', 
     body('id')
         .isMongoId().withMessage('ID no valido'),
     handleInputErrores,
     TeamController.addMemberById
+);
+
+router.delete('/:projectId/team', 
+    body('id')
+        .isMongoId().withMessage('ID no valido'),
+    handleInputErrores,
+    TeamController.removeMemberById
 );
 
 
