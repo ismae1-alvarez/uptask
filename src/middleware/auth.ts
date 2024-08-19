@@ -32,10 +32,10 @@ export const authenticate =  async(req:Request, res:Response, next:NextFunction)
         req.user = user;
 
 
+        next();
 
     } catch (error) {
         res.status(500).json({error: 'Token No Valido'});
     };
 
-    next();
 };
