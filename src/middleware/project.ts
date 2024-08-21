@@ -24,6 +24,6 @@ export async function projectExists(req:Request, res:Response, next:NextFunction
 
         next();
     } catch (error) {
-        res.status(500).json({error : 'Hubo un error'});
+        res.status(500).json({error : 'Hubo un error project'});
     };
 };

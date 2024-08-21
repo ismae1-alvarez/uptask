@@ -22,7 +22,7 @@ export class NoteController{
 
             res.send('Nota Creada Correctamente');
         } catch (error) {
-            res.status(500).json({error : 'Hubo un error'});
+            res.status(500).json({error : 'Hubo un error 1'});
         };
     };
 
